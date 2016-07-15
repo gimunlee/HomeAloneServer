@@ -31,7 +31,7 @@ module.exports = function (app) {
     get("/",function(req, res) {
         console.log("req.class, req.time logged in mongodb");
         var myLogSchema=mongoose.Schema({
-            class: String
+            class: String,
             time: String
         });
         var MyLog = mongoose.model('MyLog',myLogSchema);
