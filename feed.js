@@ -6,7 +6,7 @@ module.exports = function (app, mongoose) {
         class: String,
         time: String
     });
-    var MyLog = mongoose.model('MyLog',myLogSchema);
+    var MyLog = mongoose.model('testlogs',myLogSchema);
     var post=function(relativePath, fun) { app.post(pathPrefix+relativePath,fun); };
     var get=function(relativePath, fun) { app.get(pathPrefix+relativePath,fun); };
 
@@ -35,7 +35,7 @@ module.exports = function (app, mongoose) {
     });
     get("/",function(req, res) {
         console.log("req.class, req.time logged in mongodb");
-        var first = new MyLog({class:req.query.class, time:req.query.time});
+        var first = new MyLog({class:req.query.class, time:''+req.query.time});
         first.save(function(err, first) {
             if(err) return console.error(err);
             console.log(first.toString() + " sent");
