@@ -40,5 +40,7 @@ module.exports = function (app, mongoose) {
             if(err) return console.error(err);
             console.log(first.toString() + " sent");
         });
+        res.write("{" + req.query.class + ", " + req.query.time + "} logged." );
+        res.end();
     });
 }
