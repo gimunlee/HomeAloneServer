@@ -1,12 +1,12 @@
 // ec2-52-78-28-51.ap-northeast-2.compute.amazonaws.com:12016/feed/
 var pathPrefix="/feed";
-var myLogSchema=mongoose.Schema({
-    class: String,
-    time: String
-});
-var MyLog = mongoose.model('MyLog',myLogSchema);
 
 module.exports = function (app, mongoose) {
+    var myLogSchema=mongoose.Schema({
+        class: String,
+        time: String
+    });
+    var MyLog = mongoose.model('MyLog',myLogSchema);
     var post=function(relativePath, fun) { app.post(pathPrefix+relativePath,fun); };
     var get=function(relativePath, fun) { app.get(pathPrefix+relativePath,fun); };
 
