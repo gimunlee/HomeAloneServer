@@ -4,7 +4,7 @@ module.exports = function (app) {
     var post=function(relativePath, fun) { app.post(pathPrefix+relativePath,fun); };
     var get=function(relativePath, fun) { app.get(pathPrefix+relativePath,fun); };
 
-    get("/post", function(req, res) {
+    post("/post", function(req, res) {
         console.log("post request received");
 		console.log("class : " + req.query.class);
         console.log("time : " + req.query.time);
