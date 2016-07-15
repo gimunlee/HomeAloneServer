@@ -24,7 +24,7 @@ app.get("/",function(req, res) {
 });
 
 db.once('open',function() {
-	conole.log("mongodb connected");
+	console.log("mongodb connected");
 });
 var port = 12016;
 app.listen(12016,function() {
