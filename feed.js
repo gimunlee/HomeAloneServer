@@ -35,7 +35,7 @@ module.exports = function (app, mongoose) {
     });
     get("/",function(req, res) {
         console.log("req.class, req.time logged in mongodb");
-        var first = new MyLog({class:req.query.class, time:req.query.time.toString()});
+        var first = new MyLog({class:req.query.class, time:req.query.time});
         first.save(function(err, first) {
             if(err) return console.error(err);
             console.log(first.toString() + " sent");
