@@ -7,7 +7,7 @@ app.use(body_parser.json());
 
 var notice=require("./notice.js");
 var feed=require("./feed.js");
-noti(app);
+notice(app);
 feed(app);
 
 app.get("/",function(req, res) {
