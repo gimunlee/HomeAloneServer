@@ -12,7 +12,7 @@ module.exports = function (app) {
 		console.log("title : " + req.body.title);
 		console.log("body : " + req.body.body);
 		for(var i=0;i<req.body.tags.length;i++) {
-			console.log("tags : " + req.body.tags);
+			console.log("tags : " + req.body.tags[i]);
 		}
 
         res.writeHead(201);

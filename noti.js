@@ -1,4 +1,4 @@
-var pathPrefix="/noti";
+var pathPrefix="/notice";
 
 module.exports = function (app) {
 	var post=function(relativePath, fun) { app.post(pathPrefix+relativePath,fun); };
@@ -8,7 +8,7 @@ module.exports = function (app) {
 		res.end();
 	});
 	get("/", function(req, res) {
-		res.write("This is noti");
+		res.write("This is notice");
 		res.end();
 	});
 };

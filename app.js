@@ -5,7 +5,7 @@ var body_parser=require("body-parser");
 app.use(body_parser.urlencoded({extended:true}));
 app.use(body_parser.json());
 
-var noti=require("./noti.js");
+var notice=require("./notice.js");
 var feed=require("./feed.js");
 noti(app);
 feed(app);
