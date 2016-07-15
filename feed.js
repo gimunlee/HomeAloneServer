@@ -15,6 +15,7 @@ module.exports = function (app) {
 			console.log("tags : " + req.body.tags);
 		}
 
+        res.writeHead(201);
 		res.write("post request done\n");
         res.write("class : " + req.query.class);
         res.write("time : " + req.body.time);
@@ -37,6 +38,7 @@ module.exports = function (app) {
 		// 	console.log("tags : " + req.body.tags);
 		// }
 
+        res.writeHead(200);
 		res.write("post request done\n");
         res.write("class : " + req.query.class);
         res.write("time : " + req.query.time);
