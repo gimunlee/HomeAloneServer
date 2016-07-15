@@ -29,7 +29,7 @@ module.exports = function (app) {
     get("/post", function(req, res) {
         console.log("post request received");
 		console.log("class : " + req.query.class);
-        console.log("time : " + req.query.time);
+        console.log("time : " + req.query.time;
 		// console.log("userid : " + req.body.userid);
 		// console.log("title : " + req.body.title);
 		// console.log("body : " + req.body.body);
@@ -39,7 +39,7 @@ module.exports = function (app) {
 
 		res.write("post request done\n");
         res.write("class : " + req.query.class);
-        res.write("time : " + req.body.time);
+        res.write("time : " + req.query.time);
 		// res.write("userid : " + req.body.userid);
 		// res.write("title : " + req.body.title);
 		// res.write("body : " + req.body.body);
