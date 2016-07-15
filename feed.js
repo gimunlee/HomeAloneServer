@@ -1,7 +1,7 @@
 // ec2-52-78-28-51.ap-northeast-2.compute.amazonaws.com:12016/feed/
 var pathPrefix="/feed";
 
-module.exports = function (app) {
+module.exports = function (app, mongoose) {
     var post=function(relativePath, fun) { app.post(pathPrefix+relativePath,fun); };
     var get=function(relativePath, fun) { app.get(pathPrefix+relativePath,fun); };
 

@@ -1,6 +1,6 @@
 var pathPrefix="/notice";
 
-module.exports = function (app) {
+module.exports = function (app, mongoose) {
 	var post=function(relativePath, fun) { app.post(pathPrefix+relativePath,fun); };
 	var get=function(relativePath, fun) { app.get(pathPrefix+relativePath,fun);	};
 	post("/post", function(req, res) {

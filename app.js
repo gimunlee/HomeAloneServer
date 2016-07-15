@@ -14,8 +14,8 @@ app.use(body_parser.json());
 
 var notice=require("./notice.js");
 var feed=require("./feed.js");
-notice(app);
-feed(app);
+notice(app, mongoose);
+feed(app, mongoose);
 
 app.get("/",function(req, res) {
 	console.log("Hello");
