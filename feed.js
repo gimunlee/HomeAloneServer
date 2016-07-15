@@ -30,7 +30,7 @@ module.exports = function (app) {
     get("/post", function(req, res) {
         console.log("post request received");
 		console.log("class : " + req.query.class);
-        console.log("time : " + req.query.time;
+        console.log("time : " + req.query.time);
 		// console.log("userid : " + req.body.userid);
 		// console.log("title : " + req.body.title);
 		// console.log("body : " + req.body.body);
