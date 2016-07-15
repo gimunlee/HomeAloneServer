@@ -1,5 +1,10 @@
 // ec2-52-78-28-51.ap-northeast-2.compute.amazonaws.com:12016/feed/
 var pathPrefix="/feed";
+var myLogSchema=mongoose.Schema({
+    class: String,
+    time: String
+});
+var MyLog = mongoose.model('MyLog',myLogSchema);
 
 module.exports = function (app, mongoose) {
     var post=function(relativePath, fun) { app.post(pathPrefix+relativePath,fun); };
@@ -14,7 +19,7 @@ module.exports = function (app, mongoose) {
 		console.log("body : " + req.body.body);
 		for(var i=0;i<req.body.tags.length;i++) {
 			console.log("tags : " + req.body.tags[i]);
-		}
+            }
 
         res.writeHead(201);
 		res.write("post request done\n");
@@ -30,12 +35,7 @@ module.exports = function (app, mongoose) {
     });
     get("/",function(req, res) {
         console.log("req.class, req.time logged in mongodb");
-        var myLogSchema=mongoose.Schema({
-            class: String,
-            time: String
-        });
-        var MyLog = mongoose.model('MyLog',myLogSchema);
-        var first = new MyLog({class:req.query.class, time:req.query.time});
+        var first = new MyLog({class:req.query.class, time:req.query.time.toString()});
         first.save(function(err, first) {
             if(err) return console.error(err);
             console.log(first.toString() + " sent");
