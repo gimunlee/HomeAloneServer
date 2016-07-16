@@ -33,14 +33,4 @@ module.exports = function (app, mongoose) {
 		}
         res.end();
     });
-    get("/",function(req, res) {
-        console.log("req.class, req.time logged in mongodb");
-        var first = new MyLog({class:req.query.class, time:''+req.query.time});
-        first.save(function(err, first) {
-            if(err) return console.error(err);
-            console.log(first.toString() + " sent");
-        });
-        res.write("{" + req.query.class + ", " + req.query.time + "} logged." );
-        res.end();
-    });
 }
