@@ -12,6 +12,8 @@ db.on('error', console.error.bind(console, 'connectino error:'));
 app.use(body_parser.urlencoded({extended:true}));
 app.use(body_parser.json());
 
+mongoose.Promise=global.Promise;
+
 var notice=require("./notice.js");
 var feed=require("./feed.js");
 notice(app, mongoose);

@@ -1,0 +1,9 @@
+localhost:12016/feed/posttestarticle?userid=gimunlee&title=&body=&tags[]=
+localhost:12016/feed/posttestarticle?userid=gimunlee&title=[자취 꿀팁]남은 식재료 보관 방법 - 자취생활, 어디까지 알고 있니&body=오늘은 저번 남은 음식 보관 방법에 이어서! 요리를 하면 남게 되는 식재료 보관법에 대해서 포스팅을 하려고 해요~~ 자취생은 특히나 요리를 하면, 재료가 꼬옥 남고 마는데요, 어떻게 보관하느냐에 따라 보관기관과 신선도가 달라진다고 해요&tags[]=clean
+localhost:12016/feed/posttestarticle?userid=gimunlee&title=[자취 꿀팁]자취생 라면 맛있게 끓이는 법&body=두둥 자취생에게 라면이란 식량을 넘어서 정말 많은 의미를 함축하고 있는 음식일텐데요 오늘은 바로 그 라면 라면 맛있게 끓이는 법에 대해서 알아보려고 해용 특별한 레시피를 공유하는게 아니라 어떻게 하면 라면을 더 맛있게 끓일 수 있는지 방법에 대해 한 번 알아볼게요&tags[]=요리
+localhost:12016/feed/posttestarticle?userid=gimunlee&title=[자취 꿀팁]남은 음식 보관하는 방법 - 밥, 스팸, 통조림, 김 등&body=자취생은 혼자 산다는 특성상 요리를 하고 나면 음식이 자주 남기 마련인데요 물론 한 끼 먹을 만큼만 요리를 한다면 남는 음식 걱정이 없겠지만 매번 식사를 할 때마다 요리를 하는 것이 오히려 효율적이지 못하겠죵 ㅠㅠ 그래서 준비했습니당&tags[]=clean
+localhost:12016/feed/posttestarticle?userid=keonilkim&title=[자취 꿀팁] 자취방 와이파이 증폭시키는 꿀팁&body=오늘부터는 김군 대신 제가 직접 팁을 공유하려고 합니당 오늘은 빈 캔을 활용해서 와이파이를 증폭시키는 방법을 알아볼게요~ 자취방에서 공유기가 잘 안 터진다 싶었던 분들은 주목해주세요&tags[]=편의&tags[]=전자
+
+localhost:12016/feed/articles?tags[]=태그1&tags[]=태그2&tags[]=태그3
+localhost:12016/feed/articles?tags[]=요리
+http://localhost:12016/feed/articles?tags[]=test&tags[]=clean&after=20160716%20101915&userid=keonilkim&before=20160716%20101915
