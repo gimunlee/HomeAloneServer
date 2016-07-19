@@ -16,8 +16,10 @@ mongoose.Promise=global.Promise;
 
 var notice=require("./notice.js");
 var feed=require("./feed.js");
+var users=require("./users.js");
 notice(app, mongoose);
 feed(app, mongoose);
+users(app, mongoose);
 
 app.get("/",function(req, res) {
 	console.log("Hello");

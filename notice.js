@@ -11,10 +11,10 @@ module.exports = function (app, mongoose) {
 			day:Number, //-1
 			dayofweek:Number, //-1
 			date:String, //"nodate"
-			aftermincount:{
-				name:String, //"noname"
-				mincount:Number //-1
-			},
+			// aftermincount:{
+			// 	name:String, //"noname"
+			// 	mincount:Number //-1
+			// },
 			weather:String //"noweather"
 		},
 		tipkey:String, //"notipkey"

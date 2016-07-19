@@ -78,6 +78,7 @@ module.exports = function (app, mongoose) {
         var query=Article.find({});
         var outputLog='';
 
+        // console.log(req.query.tags);
         outputLog="-> Receiving request for articles";
         if(req.query.userid!=null) {
             var userid=req.query.userid;
@@ -87,7 +88,7 @@ module.exports = function (app, mongoose) {
         if(req.query.tags!=null) {
             var tags=req.query.tags;
             outputLog=outputLog+" with tags " + tags;
-            query=query.where("tags").all(tags);
+            query=query.where("tags").in(tags);
         }
         if(req.query.after!=null) {
             var after=req.query.after;
