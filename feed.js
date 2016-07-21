@@ -90,6 +90,9 @@ module.exports = function (app, mongoose) {
             outputLog=outputLog+" with tags " + tags;
             query=query.where("tags").in(tags);
         }
+        else {
+            query=query.where("tags").in([]);
+        }
         if(req.query.after!=null) {
             var after=req.query.after;
             outputLog=outputLog+" after " + after;
@@ -121,4 +124,21 @@ module.exports = function (app, mongoose) {
         console.log("-> Sending UTC time : " + moment().utc().format("YYYYMMDD HHmmss Z"));
         res.send(moment().utc().format("YYYYMMDD HHmmss Z"));
     });
+    get("/article/body", function(req,res) {
+        var id=req.query.bodyid;
+        var fs = require('fs');
+        var path=require('path');
+        fs.readFile(path.join(__dirname,'./articlebodies/')+id+'.html','utf8', function(err, data) {
+            if(err) console.log(err+'');
+            console.log(data);
+            res.send(data);
+        });
+    });
+    get("/gimun",function(req, res) {
+        Article.findOne({"_id":"578a1532de3c8ae01902dc37"}, function(err, user) {
+            user.body='storagedfood';
+            user.save();
+            res.send('done.' + user.time);
+        })
+    })
 }
